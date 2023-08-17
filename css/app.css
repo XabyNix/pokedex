@@ -1,0 +1,135 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+body > h1 {
+	position: relative;
+	left: 50%;
+	width: fit-content;
+	margin: 1rem, 0;
+	padding: 0;
+	font-family: cursive;
+	transform: translateX(-50%);
+}
+#searchBar {
+	font-size: large;
+	display: block;
+	margin: 2rem auto;
+	max-width: 20rem;
+	padding: 1rem;
+	border: none;
+	border-radius: 7px;
+	background-color: rgba(236, 236, 236, 0.849);
+	box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.5);
+}
+#searchBar:focus {
+	outline: 1px solid black;
+	box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.5);
+}
+#pokedex {
+	padding: 0 10%;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	min-width: 13rem;
+	height: auto;
+	box-sizing: border-box;
+	padding: 1rem 1rem;
+	flex-direction: column;
+	background-color: #ffe4c4;
+	border-radius: 4px;
+	font-family: "Courier New", Courier, monospace;
+	box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.5);
+}
+.card:not(.innerPopup):hover {
+	margin: -1px;
+	border: 1px solid #3c000059;
+	cursor: pointer;
+	box-shadow: 0 0 15px #3c000059;
+}
+.card-id {
+	font-size: large;
+}
+.card-image {
+	max-width: 6rem;
+	height: auto;
+}
+.card-title {
+	font-size: x-large;
+	border-bottom: 1px solid black;
+}
+#popupContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(3px);
+}
+.innerPopup {
+	position: fixed;
+	padding: 1.4rem 1.5rem;
+	max-width: 100%;
+	max-width: 20rem;
+	max-height: 40rem;
+	background-color: antiquewhite;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.5);
+	margin: -1px;
+}
+
+.innerPopup > img {
+	margin-top: -60px;
+	max-width: 7rem;
+	height: auto;
+	padding: 0.5rem;
+	background-color: hwb(34 90% 2%);
+	border-radius: 100%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.statsContainer {
+	width: 70%;
+}
+.statsContainer__barContainer {
+	font-size: large;
+	font-weight: bold;
+	margin-bottom: 1em;
+	width: 100%;
+}
+.statsContainer__barContainer__bar {
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+.statsContainer__barContainer__bar-inside {
+	color: white;
+	font-weight: bold;
+	border-radius: inherit;
+	text-align: right;
+	height: 100%;
+}
+
+.hp {
+	background-color: #004d00;
+}
+.attack {
+	background-color: #8a0000;
+}
+.defense {
+	color: #2e2e2e;
+	background-color: #00ffff;
+}
+.speed {
+	color: rgb(46, 46, 46);
+	background-color: rgb(214, 214, 0);
+}
